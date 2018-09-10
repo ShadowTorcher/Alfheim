@@ -1,0 +1,13 @@
+server {
+    listen [::]:80;
+    server_name shadowtorcher.club;
+    location / {
+        proxy_pass http://localhost:12306;
+        proxy_set_header Host $http_host;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Read-IP $remote_addr;
+    }
+}

@@ -1,0 +1,6 @@
+[package]
+name = "deployer"
+version = "0.1.0"
+authors = ["Sasasu <lizhaolong0123@gmail.com>"]
+
+[dependencies]
